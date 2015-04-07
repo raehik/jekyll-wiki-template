@@ -1,0 +1,28 @@
+# Site settings
+title: Jekyll wiki
+email: youremail@example.com
+description: A personal wiki created using the Jekyll static site generator.
+twitter_username: your_twitter
+github_username: your_github
+
+# Build settings
+markdown: RedcarpetShortlink
+permalink: pretty
+exclude: [wiki-pages]
+
+# Default frontmatter
+defaults:
+  -
+    scope:
+      path: ""
+      type: wiki
+    values:
+      layout: wiki
+
+collections:
+  wiki:
+    output: true
+    # if webrick-content-type.rb is enabled
+    #permalink: /:path
+    # if not
+    permalink: /:path/

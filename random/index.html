@@ -1,0 +1,23 @@
+---
+layout: null
+---
+
+<html>
+<head>
+    <script>
+        var pages = [];
+        {% for page in site.wiki %}
+        pages.push("{{ page.url }}");
+        {% endfor %}
+
+        random_page = pages[Math.floor(Math.random() * pages.length)];
+
+        document.write("<meta http-equiv=\"refresh\" content=\"0;url=");
+        document.write(random_page);
+        document.write("\">");
+    </script>
+</head>
+<body>
+    Redirecting to a random page...
+</body>
+</html>

@@ -61,6 +61,10 @@ shift $((OPTIND-1))
 
 
 
+if [[ ! -e "$wiki_dest" ]]; then
+    mkdir "$wiki_dest"
+fi
+
 wiki_src="wiki-pages"
 wiki_dest="_wiki"
 insert_string="---\n---\n"

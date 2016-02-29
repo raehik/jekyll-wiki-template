@@ -1,0 +1,24 @@
+{% if page.tags %}
+<p class="post-meta">
+
+{% comment %}
+<!-- get & sort tags alphabetically -->
+{% endcomment %}
+
+{% capture mytags %}
+  {% for tag in page.tags %}
+    {{ tag }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = mytags | split:' ' | sort %}
+
+{% comment %}
+<!-- for each tag, print & link to its page -->
+{% endcomment %}
+
+{% for tag in sortedtags %}
+<a href="{{ site.baseurl }}/tag/{{tag}}">{{tag}}</a>
+{% endfor %}
+
+</p>
+{% endif %}

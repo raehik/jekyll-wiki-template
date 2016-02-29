@@ -6,7 +6,7 @@ twitter_username: your_twitter
 github_username: your_github
 
 # Build settings
-markdown: RedcarpetShortlink
+markdown: RedcarpetCustom
 permalink: pretty
 exclude: [wiki-pages]
 
